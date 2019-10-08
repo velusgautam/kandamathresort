@@ -1,0 +1,79 @@
+/* ######### CSS for PHP Photo Album itself ######### */
+
+.photodiv{ /*CSS for DIV containing each image*/
+float: left;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+.photodiv img{ /*CSS for each image tag*/
+border: 0;
+width: 268px;
+height: 134px;
+cursor: hand;
+cursor: pointer;
+}
+
+.albumnavlinks{ /*CSS for DIV containing the navigational links*/
+}
+
+.albumnavlinks a{ /*CSS for each navigational link*/
+margin-right: 5px;
+padding: 1px 5px;
+border: 1px solid #9aafe5;
+text-decoration: none; 
+color: #2e6ab1;
+font-weight: bold;
+}
+
+
+.albumnavlinks a:hover, .albumnavlinks a.current{ /*CSS for currently selected navigational link*/
+border: 1px solid #2b66a5;
+background-color: yellow;
+}
+
+/* ######### CSS for thumbnail viewer plugin ######### */
+
+#thumbBox{ /*Outermost DIV for thumbnail viewer*/
+position: absolute;
+left: 0;
+top: 0;
+width: auto;
+padding: 8px;
+padding-bottom: 0;
+background: #313131;
+visibility: hidden;
+z-index: 10;
+cursor: hand;
+cursor: pointer;  
+box-shadow: 5px 5px #818181; /* Experimental box shadow properties*/
+-webkit-box-shadow: 5px 5px #818181;
+-moz-box-shadow: 5px 5px #818181;
+-ms-filter: "progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=5, offY=5,  positive=true)"; /* IE8 drop shadow*/
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=5, offY=5,  positive=true); /* IE drop shadow*/
+}
+
+#thumbBox .footerbar{ /*Footer DIV of thumbbox that contains "close" link */
+font: bold 14px Tahoma;
+letter-spacing: 5px;
+line-height: 1.1em;
+color: white;
+padding: 5px 0;
+text-align: right;
+}
+
+
+#thumbBox #thumbImage{ /*DIV within thumbbox that holds the enlarged image */
+background-color: white;
+margin: 5px;
+}
+
+#thumbLoading{ /*DIV for showing "loading" status while thumbbox is being generated*/
+position: absolute;
+visibility: hidden;
+border: 1px solid black;
+background-color: #EFEFEF;
+padding: 10px;
+font: bold 14px Arial;
+z-index: 5;
+}
